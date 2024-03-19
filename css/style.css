@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* manrope-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/manrope-v15-latin-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+    /* colors */
+    --DarkGrayishBlue-color: #313A48;
+    --Light-Cyan-color: #CEE3E9;
+    --white-color: #fff;
+    --refresh-color: #fff;
+    --Dark-Blue-color: #202733;
+    --Neon-Green-color: #53FFAA;
+}
+
+body {
+    font-family: 'Manrope';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 39, 51);
+}
+
+.wrapper {
+    background-color: var(--DarkGrayishBlue-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 540px;
+    height: 332px;
+    margin-top: 10%;
+    border-radius: 10px;
+    padding: 48px 48px 72px 48px;
+}
+
+
+.wrapper h1 {
+    font-size: 13px;
+    letter-spacing: 4.09px;
+    font-weight: 700;
+    color: var(--Neon-Green-color);
+    margin-bottom: 24px;
+}
+
+
+.wrapper p {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--Light-Cyan-color);
+    margin-bottom: 40px;
+}
+
+.block__line {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.block__line .block-line__line {
+    background-color: #4F5D74;
+    width: 196px;
+    height: 1px;
+}
+
+.btn {
+    position: absolute;
+    top: 440px;
+    padding: 30px 32px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms;
+    background-color: #53FFAA;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 56px 7px rgba(84, 255, 170, 0.79);
+}
+
+
+@media (max-width: 575px) {
+    .wrapper {
+        width: 450px;
+        height: 360px;
+    }
+
+    .block-line__line {
+        width: 140px !important;
+    }
+
+    .btn {
+        top: 380px;
+    }
+}
+
+@media (max-width: 470px) {
+    .wrapper {
+        width: 350px !important;
+        height: 400px;
+    }
+
+    .wrapper p {
+        font-size: 22px;
+    }
+
+    .block-line__line {
+        width: 140px !important;
+    }
+
+    .btn {
+        top: 400px;
+    }
+}
